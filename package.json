@@ -1,0 +1,73 @@
+{
+  "name": "objection-guid-id",
+  "version": "0.0.0",
+  "description": "objection-guid-id",
+  "keywords": [
+    "guid",
+    "id",
+    "objection"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Seegno",
+    "email": "projects@seegno.com",
+    "url": "https://seegno.com"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist/* && babel src --out-dir dist",
+    "changelog": "github_changelog_generator --no-issues --header-label='# Changelog' --future-release=v$npm_config_future_release && sed -i '' -e :a -e '$d;N;2,4ba' -e 'P;D' CHANGELOG.md",
+    "cover": "jest --coverage --forceExit",
+    "lint": "eslint src test",
+    "lint-staged": "lint-staged",
+    "test": "jest --forceExit",
+    "test-watch": "jest --watch --onlyChanged",
+    "version": "npm run changelog --future-release=$npm_package_version && git add -A CHANGELOG.md"
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "dependencies": {
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.0",
+    "babel-eslint": "^7.2.1",
+    "babel-jest": "^19.0.0",
+    "babel-plugin-module-resolver": "^2.7.0",
+    "babel-preset-es2015-node": "^6.1.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-seegno": "^9.0.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-jest": "^19.0.1",
+    "jest": "^20.0.3",
+    "knex": "^0.13.0",
+    "lint-staged": "^3.4.1",
+    "objection": "^0.7.12",
+    "pre-commit": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "jest": {
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "html",
+      "lcov",
+      "text"
+    ],
+    "coveragePathIgnorePatterns": [
+      "./test/fixtures"
+    ],
+    "testEnvironment": "node",
+    "testRegex": "(test/.*\\.test.js)$"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.js": [
+      "eslint",
+      "git add",
+      "jest --findRelatedTests --forceExit"
+    ]
+  }
+}
