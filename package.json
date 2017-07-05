@@ -16,6 +16,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist/* && babel src --out-dir dist",
+    "coveralls": "npm run cover && cat ./coverage/lcov.info | coveralls",
     "changelog": "github_changelog_generator --no-issues --header-label='# Changelog' --future-release=v$npm_config_future_release && sed -i '' -e :a -e '$d;N;2,4ba' -e 'P;D' CHANGELOG.md",
     "cover": "jest --coverage --forceExit",
     "lint": "eslint src test",
@@ -37,6 +38,7 @@
     "babel-plugin-module-resolver": "^2.7.0",
     "babel-preset-es2015-node": "^6.1.1",
     "babel-preset-stage-1": "^6.24.1",
+    "coveralls": "^2.13.1",
     "eslint": "^3.19.0",
     "eslint-config-seegno": "^9.0.0",
     "eslint-plugin-babel": "^4.1.1",
