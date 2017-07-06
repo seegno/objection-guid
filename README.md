@@ -1,5 +1,7 @@
 # Automatic guid id for Objection.js
 
+[![Build Status](https://img.shields.io/travis/seegno/objection-guid-id/master.svg?style=flat-square)](https://travis-ci.org/seegno/objection-guid-id)
+
 This plugin adds an automatic guid id to your [Objection.js](https://github.com/Vincit/objection.js/) models using the [uuid](https://github.com/kelektiv/node-uuid) package for guid generation.
 
 ## Installation
