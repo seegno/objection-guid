@@ -1,9 +1,10 @@
+'use strict';
 
 /**
  * Module dependencies.
  */
 
-import TestModel from 'test/fixtures/test-model';
+const TestModel = require('./fixtures/test-model');
 
 /**
  * Test `guid` plugin.
@@ -17,10 +18,12 @@ describe('GuidIdPlugin', () => {
   });
 
   describe('$beforeInsert', () => {
-    it('should add `id` properties to the model', async () => {
-      await model.$beforeInsert();
+    it('should add `id` properties to the model', () => {
+      const parent = model.$beforeInsert();
 
-      expect(model).toEqual({ id: expect.any(String) });
+      return Promise.resolve(parent).then(() => {
+        expect(model).toEqual({ id: expect.any(String) });
+      });
     });
   });
 });

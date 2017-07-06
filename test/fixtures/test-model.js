@@ -1,20 +1,23 @@
+'use strict';
 
 /**
  * Module dependencies.
  */
 
-import { Model } from 'objection';
-import { guid } from '';
+const Model = require('objection').Model;
+const guid = require('../../index');
 
 /**
  * Export `TestModel`.
  */
 
-export default class TestModel extends guid(Model) {
+module.exports = class TestModel extends guid(Model) {
 
   /**
    * Table name.
    */
 
-  static tableName = 'Test';
-}
+  static get tableName() {
+    return 'Test';
+  }
+};
