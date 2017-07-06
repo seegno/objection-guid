@@ -1,15 +1,16 @@
+'use strict';
 
 /**
  * Module dependencies.
  */
 
-import uuid from 'uuid';
+const uuid = require('uuid');
 
 /**
  * Export `guid`
  */
 
-export function guid(Model) {
+module.exports = Model => {
   return class GuidIdPlugin extends Model {
 
     /**
@@ -24,4 +25,4 @@ export function guid(Model) {
       });
     }
   };
-}
+};
