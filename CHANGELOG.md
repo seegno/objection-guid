@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.0.1](https://github.com/seegno/objection-guid/tree/v1.0.1) (2017-07-06)
+[Full Changelog](https://github.com/seegno/objection-guid/compare/v1.0.0...v1.0.1)
+
+**Merged pull requests:**
+
+- Fix readme example [\#11](https://github.com/seegno/objection-guid/pull/11) ([nunorafaelrocha](https://github.com/nunorafaelrocha))
+
 ## [v1.0.0](https://github.com/seegno/objection-guid/tree/v1.0.0) (2017-07-06)
 **Merged pull requests:**
 
