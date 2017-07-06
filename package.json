@@ -5,7 +5,8 @@
   "keywords": [
     "guid",
     "id",
-    "objection"
+    "objection",
+    "objectionjs"
   ],
   "license": "MIT",
   "author": {
@@ -13,10 +14,14 @@
     "email": "projects@seegno.com",
     "url": "https://seegno.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seegno/objection-guid.git"
+  },
   "scripts": {
-    "coveralls": "npm run cover && cat ./coverage/lcov.info | coveralls",
     "changelog": "github_changelog_generator --no-issues --header-label='# Changelog' --future-release=v$npm_config_future_release && sed -i '' -e :a -e '$d;N;2,4ba' -e 'P;D' CHANGELOG.md",
     "cover": "jest --coverage --forceExit",
+    "coveralls": "npm run cover && cat ./coverage/lcov.info | coveralls",
     "lint": "eslint src test",
     "lint-staged": "lint-staged",
     "test": "jest --forceExit",
@@ -33,7 +38,6 @@
     "coveralls": "^2.13.1",
     "eslint": "^3.19.0",
     "eslint-config-seegno": "^9.0.0",
-    "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-jest": "^19.0.1",
     "jest": "^20.0.3",
     "knex": "^0.13.0",
