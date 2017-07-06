@@ -1,7 +1,7 @@
 {
-  "name": "objection-guid-id",
+  "name": "objection-guid",
   "version": "0.0.0",
-  "description": "objection-guid-id",
+  "description": "objection-guid",
   "keywords": [
     "guid",
     "id",
