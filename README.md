@@ -27,7 +27,7 @@ yarn add objection-guid
 
 ```js
 // Import the plugin.
-const guid = require('objection-guid')();
+const guid = require('objection-guid');
 const Model = require('objection').Model;
 
 // Mixin the plugin.
