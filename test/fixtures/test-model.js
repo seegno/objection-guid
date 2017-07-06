@@ -3,8 +3,8 @@
  * Module dependencies.
  */
 
-import { guid } from '';
 import { Model } from 'objection';
+import { guid } from '';
 
 /**
  * Export `TestModel`.
