@@ -1,5 +1,12 @@
 # Changelog
 
+## [v2.0.0](https://github.com/seegno/objection-guid/tree/v2.0.0) (2017-07-11)
+[Full Changelog](https://github.com/seegno/objection-guid/compare/v1.0.1...v2.0.0)
+
+**Merged pull requests:**
+
+- Add field and generateGuid plugin options [\#12](https://github.com/seegno/objection-guid/pull/12) ([joaonice](https://github.com/joaonice))
+
 ## [v1.0.1](https://github.com/seegno/objection-guid/tree/v1.0.1) (2017-07-06)
 [Full Changelog](https://github.com/seegno/objection-guid/compare/v1.0.0...v1.0.1)
 
