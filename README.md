@@ -27,7 +27,7 @@ yarn add objection-guid
 
 ```js
 // Import the plugin.
-const guid = require('objection-guid');
+const guid = require('objection-guid')();
 const Model = require('objection').Model;
 
 // Mixin the plugin.
@@ -43,6 +43,21 @@ const item = await Item.query().insert({
 
 console.log(item.id);
 // bbbe64b0-61a3-11e7-879a-67bb027591aa
+```
+
+## Options
+
+**field:** Overrides the default field name of the generated guid. (Default: `id`)
+
+**generateGuid:** Overrides the default function that generates a guid. This function can be a promise. (Default: generates UUIDs v4)
+
+These options can be provided when instantiating the plugin:
+
+```js
+const guid = require('objection-guid')(
+  field: 'foo',
+  generateGuid: () => 'bar'
+);
 ```
 
 ## Tests

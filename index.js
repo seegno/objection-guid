@@ -7,22 +7,31 @@
 const uuid = require('uuid');
 
 /**
- * Export `guid`
+ * Export `guid`.
  */
 
-module.exports = Model => {
-  return class GuidIdPlugin extends Model {
+module.exports = options => {
+  options = Object.assign({
+    field: 'id',
+    generateGuid: () => uuid.v4()
+  }, options);
 
-    /**
-     * Before insert.
-     */
+  return Model => {
+    return class GuidIdPlugin extends Model {
 
-    $beforeInsert(context) {
-      const parent = super.$beforeInsert(context);
+      /**
+       * Before insert.
+       */
 
-      return Promise.resolve(parent).then(() => {
-        this.id = uuid.v1();
-      });
-    }
+      $beforeInsert(context) {
+        const parent = super.$beforeInsert(context);
+
+        return Promise.resolve(parent)
+          .then(() => options.generateGuid(context))
+          .then(guid => {
+            this[options.field] = guid;
+          });
+      }
+    };
   };
 };
