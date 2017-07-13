@@ -6,7 +6,9 @@
     "guid",
     "id",
     "objection",
-    "objectionjs"
+    "objectionjs",
+    "plugin",
+    "plugins"
   ],
   "license": "MIT",
   "author": {
