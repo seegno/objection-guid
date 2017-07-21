@@ -32,17 +32,17 @@
     "lint-staged"
   ],
   "dependencies": {
-    "uuid": "^3.0.1"
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
     "coveralls": "^2.13.1",
     "eslint": "^3.19.0",
     "eslint-config-seegno": "^9.0.0",
-    "eslint-plugin-jest": "^19.0.1",
+    "eslint-plugin-jest": "^20.0.3",
     "jest": "^20.0.3",
     "knex": "^0.13.0",
-    "lint-staged": "^3.4.1",
-    "objection": "^0.7.12",
+    "lint-staged": "^4.0.2",
+    "objection": "^0.8.5",
     "pre-commit": "^1.2.2"
   },
   "engines": {
