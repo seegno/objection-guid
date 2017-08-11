@@ -17,7 +17,7 @@ module.exports = options => {
   }, options);
 
   return Model => {
-    return class GuidIdPlugin extends Model {
+    return class extends Model {
 
       /**
        * Before insert.
