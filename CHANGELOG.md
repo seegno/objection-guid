@@ -1,5 +1,14 @@
 # Changelog
 
+## [v2.1.0](https://github.com/seegno/objection-guid/tree/v2.1.0) (2017-08-11)
+[Full Changelog](https://github.com/seegno/objection-guid/compare/v2.0.0...v2.1.0)
+
+**Merged pull requests:**
+
+- Update plugin to export anonymously [\#16](https://github.com/seegno/objection-guid/pull/16) ([joaonice](https://github.com/joaonice))
+- Update dependencies [\#14](https://github.com/seegno/objection-guid/pull/14) ([nunorafaelrocha](https://github.com/nunorafaelrocha))
+- Add keywords to package.json [\#13](https://github.com/seegno/objection-guid/pull/13) ([nunorafaelrocha](https://github.com/nunorafaelrocha))
+
 ## [v2.0.0](https://github.com/seegno/objection-guid/tree/v2.0.0) (2017-07-11)
 [Full Changelog](https://github.com/seegno/objection-guid/compare/v1.0.1...v2.0.0)
 
