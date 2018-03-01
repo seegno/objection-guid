@@ -1,5 +1,13 @@
 # Changelog
 
+## [v3.0.0](https://github.com/seegno/objection-guid/tree/v3.0.0) (2018-03-01)
+[Full Changelog](https://github.com/seegno/objection-guid/compare/v2.1.0...v3.0.0)
+
+**Merged pull requests:**
+
+- Add possibility to provide custom values [\#19](https://github.com/seegno/objection-guid/pull/19) ([nunorafaelrocha](https://github.com/nunorafaelrocha))
+- Remove node 4 support [\#18](https://github.com/seegno/objection-guid/pull/18) ([nunorafaelrocha](https://github.com/nunorafaelrocha))
+
 ## [v2.1.0](https://github.com/seegno/objection-guid/tree/v2.1.0) (2017-08-11)
 [Full Changelog](https://github.com/seegno/objection-guid/compare/v2.0.0...v2.1.0)
 
