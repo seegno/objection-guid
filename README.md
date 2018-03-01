@@ -45,6 +45,10 @@ console.log(item.id);
 // bbbe64b0-61a3-11e7-879a-67bb027591aa
 ```
 
+### Custom values
+
+If your model already has a value for the configured field, the value is not overwritten.
+
 ## Options
 
 **field:** Overrides the default field name of the generated guid. (Default: `id`)
