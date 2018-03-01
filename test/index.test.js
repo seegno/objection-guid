@@ -57,5 +57,32 @@ describe('GuidIdPlugin', () => {
         expect(model).toEqual({ foo: 'bar' });
       });
     });
+
+    it('should not update `id` property value and not call `generateGuid` if an `model.id` is already defined', () => {
+      const generateGuid = jest.fn();
+      const model = modelFactory({ generateGuid });
+      const parent = model.$beforeInsert();
+
+      model.id = 'foo';
+
+      return Promise.resolve(parent).then(() => {
+        expect(model).toEqual({ id: 'foo' });
+      });
+    });
+
+    it('should not update custom property value and not call `generateGuid` if an property value is already defined', () => {
+      const generateGuid = jest.fn();
+      const model = modelFactory({
+        field: 'foo',
+        generateGuid
+      });
+      const parent = model.$beforeInsert();
+
+      model.foo = 'bar';
+
+      return Promise.resolve(parent).then(() => {
+        expect(model).toEqual({ foo: 'bar' });
+      });
+    });
   });
 });
