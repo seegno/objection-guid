@@ -48,7 +48,7 @@
     "pre-commit": "^1.2.2"
   },
   "engines": {
-    "node": ">=4.2.0"
+    "node": ">=6"
   },
   "jest": {
     "coverageDirectory": "coverage",
