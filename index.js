@@ -27,7 +27,7 @@ module.exports = options => {
         const parent = super.$beforeInsert(context);
 
         return Promise.resolve(parent)
-          .then(() => options.generateGuid(context))
+          .then(() => this[options.field] || options.generateGuid(context))
           .then(guid => {
             this[options.field] = guid;
           });
