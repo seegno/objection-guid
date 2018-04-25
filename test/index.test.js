@@ -84,5 +84,21 @@ describe('GuidIdPlugin', () => {
         expect(model).toEqual({ foo: 'bar' });
       });
     });
+
+    it('should call `generateGuid` in the context of the entity', () => {
+      function generateGuid() {
+        return `${this.foo}-1`;
+      }
+      const model = modelFactory({
+        generateGuid
+      });
+      const parent = model.$beforeInsert();
+
+      model.foo = 'bar';
+
+      return Promise.resolve(parent).then(() => {
+        expect(model).toEqual({ foo: 'bar', id: 'bar-1' });
+      });
+    });
   });
 });
