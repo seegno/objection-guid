@@ -11,14 +11,16 @@ const uuid = require('uuid');
  */
 
 module.exports = options => {
-  options = Object.assign({
-    field: 'id',
-    generateGuid: () => uuid.v4()
-  }, options);
+  options = Object.assign(
+    {
+      field: 'id',
+      generateGuid: () => uuid.v4()
+    },
+    options
+  );
 
   return Model => {
     return class extends Model {
-
       /**
        * Before insert.
        */
@@ -27,7 +29,10 @@ module.exports = options => {
         const parent = super.$beforeInsert(context);
 
         return Promise.resolve(parent)
-          .then(() => this[options.field] || options.generateGuid.call(this, context))
+          .then(
+            () =>
+              this[options.field] || options.generateGuid.call(this, context)
+          )
           .then(guid => {
             this[options.field] = guid;
           });
