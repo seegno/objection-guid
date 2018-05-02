@@ -45,7 +45,8 @@
     "knex": "^0.13.0",
     "lint-staged": "^4.0.2",
     "objection": "^0.8.5",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.12.1"
   },
   "engines": {
     "node": ">=6"
@@ -65,6 +66,7 @@
   },
   "lint-staged": {
     "index.js": [
+      "prettier --single-quote --write",
       "eslint",
       "git add",
       "jest --findRelatedTests --forceExit"
