@@ -66,6 +66,7 @@
   },
   "lint-staged": {
     "index.js": [
+      "prettier --single-quote --write",
       "eslint",
       "git add",
       "jest --findRelatedTests --forceExit"
