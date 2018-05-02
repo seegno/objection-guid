@@ -24,7 +24,7 @@
     "changelog": "github_changelog_generator --no-issues --header-label='# Changelog' --future-release=v$npm_config_future_release && sed -i '' -e :a -e '$d;N;2,4ba' -e 'P;D' CHANGELOG.md",
     "cover": "jest --coverage --forceExit",
     "coveralls": "npm run cover && cat ./coverage/lcov.info | coveralls",
-    "lint": "eslint src test",
+    "lint": "eslint index.js test",
     "lint-staged": "lint-staged",
     "test": "jest --forceExit",
     "test-watch": "jest --watch --onlyChanged",
