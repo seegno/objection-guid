@@ -1,11 +1,21 @@
 # Changelog
 
+## [v3.0.2](https://github.com/seegno/objection-guid/tree/v3.0.2) (2018-08-17)
+[Full Changelog](https://github.com/seegno/objection-guid/compare/v3.0.1...v3.0.2)
+
+**Merged pull requests:**
+
+- Fix uuid to uuid/v4 [\#25](https://github.com/seegno/objection-guid/pull/25) ([rivertam](https://github.com/rivertam))
+- Fix mistake in example in README.md [\#24](https://github.com/seegno/objection-guid/pull/24) ([rivertam](https://github.com/rivertam))
+- Add prettier code formatter [\#23](https://github.com/seegno/objection-guid/pull/23) ([nunorafaelrocha](https://github.com/nunorafaelrocha))
+- Fix lint script [\#22](https://github.com/seegno/objection-guid/pull/22) ([nunorafaelrocha](https://github.com/nunorafaelrocha))
+
 ## [v3.0.1](https://github.com/seegno/objection-guid/tree/v3.0.1) (2018-04-26)
 [Full Changelog](https://github.com/seegno/objection-guid/compare/v3.0.0...v3.0.1)
 
 **Merged pull requests:**
 
-- Pass entity context to the generateGuid function [\#21](https://github.com/seegno/objection-guid/pull/21) ([MichalB](https://github.com/MichalB))
+- Pass entity context to the generateGuid function [\#21](https://github.com/seegno/objection-guid/pull/21) ([misablaha](https://github.com/misablaha))
 - Update README with custom values section [\#20](https://github.com/seegno/objection-guid/pull/20) ([nunorafaelrocha](https://github.com/nunorafaelrocha))
 
 ## [v3.0.0](https://github.com/seegno/objection-guid/tree/v3.0.0) (2018-03-01)
