@@ -58,10 +58,10 @@ If your model already has a value for the configured field, the value is not ove
 These options can be provided when instantiating the plugin:
 
 ```js
-const guid = require('objection-guid')(
+const guid = require('objection-guid')({
   field: 'foo',
   generateGuid: () => 'bar'
-);
+});
 ```
 
 ## Tests
