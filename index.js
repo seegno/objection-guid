@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-const uuid = require('uuid');
+const uuid = require('uuid/v4');
 
 /**
  * Export `guid`.
@@ -14,7 +14,7 @@ module.exports = options => {
   options = Object.assign(
     {
       field: 'id',
-      generateGuid: () => uuid.v4()
+      generateGuid: () => uuid()
     },
     options
   );

@@ -4,7 +4,7 @@
  * Jest mocks.
  */
 
-jest.mock('uuid', () => ({ v4: jest.fn(() => 'foobar') }));
+jest.mock('uuid/v4', () => jest.fn(() => 'foobar'));
 
 /**
  * Module dependencies.
